@@ -20,8 +20,8 @@
 
     void Dron::animacja_ruch(const double droga , std::shared_ptr<drawNS::Draw3DAPI> api){
         scena=api;
-        // for(int i=0 ; i < 100 ; i++){
-            ruch(droga);
+         for(int i=0 ; i < 100 ; i++){
+            ruch(droga/100);
 	        Wirnik_L.obrot('Y',10);
 	        Wirnik_P.obrot('Y',-10);
             //Wirnik_L.wiru_wiru(Lew,10);
@@ -30,7 +30,7 @@
             rysuj_drona(srodek,scena);
             scena->redraw();
                 }
-        //}
+        }
     
 
     void Dron::animacja_obrot(char os, const double kat , std::shared_ptr<drawNS::Draw3DAPI> api) {

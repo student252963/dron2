@@ -132,6 +132,8 @@ int main() {
       cout << ">";
       cin >> droga;
       cout<<endl;
+      drony[ktory] -> animacja_ruch(droga,api);
+      /*
       for(int i=0; i<100;i++){
       drony[ktory] -> animacja_ruch(droga/100,api);
         for(int j=0; j<8; j++) {
@@ -141,8 +143,8 @@ int main() {
             drony[ktory] -> animacja_ruch(-droga/100,api);
           }
         }
-      }
-      cout<< "Istniejace wektory: " << Wektor3D::zwroc_istniejace() << endl;
+      } */
+  cout<< "Istniejace wektory: " << Wektor3D::zwroc_istniejace() << endl;
   cout<< "Stworzone wektory: " << Wektor3D::zwroc_stworzone()<<endl;
   cout << "Istniejace obiekty: " << ObiektRysowalny::zwroc_istniejace() << endl;
   cout << "Stworzone obiekty: " << ObiektRysowalny::zwroc_stworzone()<<endl;
@@ -156,16 +158,8 @@ int main() {
       cout << ">";
       cin >> droga;
       cout<<endl;
-      for(int i=0; i<100;i++){
-      drony[ktory] -> animacja_plyn(kat,droga/100,api);
-      for(int j=0; j<8; j++) {
-          if(przeszkody[j]->kolizja(*drony[ktory])==true){
-            i=420;
-            cout<<"KOLIZJA"<<endl;
-            drony[ktory] -> animacja_plyn(-kat/100,-droga/100,api);
-      }
-      }
-      }
+      drony[ktory]->animacja_plyn(kat,droga,api);
+      
       cout<< "Istniejace wektory: " << Wektor3D::zwroc_istniejace() << endl;
   cout<< "Stworzone wektory: " << Wektor3D::zwroc_stworzone()<<endl;
   cout << "Istniejace obiekty: " << ObiektRysowalny::zwroc_istniejace() << endl;
